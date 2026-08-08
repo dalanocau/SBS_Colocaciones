@@ -1,5 +1,7 @@
 ﻿nombre_sbs,nombre_bd,entidad,microfinanciera,nacional,clasificacion
 Alfin Banco,Alfin Banco,BANCOS,NO,LOCAL,SF
+B. Interamericano de Finanzas,BanBif,BAnombre_sbs,nombre_bd,entidad,microfinanciera,nacional,clasificacion
+Alfin Banco,Alfin Banco,BANCOS,NO,LOCAL,SF
 B. Interamericano de Finanzas,BanBif,BANCOS,NO,LOCAL,SF
 Banco Interamericano de Finanzas,BanBif,BANCOS,NO,LOCAL,SF
 B. Azteca Perú,Banco Azteca,BANCOS,NO,LOCAL,SF
@@ -195,9 +197,9 @@ Mitsui Auto Finance *,Financiera Mitsui,FINANCIERAS,NO,LOCAL,SF
 Mitsui Financiera,Financiera Mitsui,FINANCIERAS,NO,LOCAL,SF
 Financiera Nueva Visión,Financiera Nueva Visión,FINANCIERAS,SI,LOCAL,SF
 Financiera Nueva Visión *,Financiera Nueva Visión,FINANCIERAS,SI,LOCAL,SF
-Financiera Oh!,Financiera Oh,FINANCIERAS,NO,LOCAL,SF
-Financiera Oh!*,Financiera Oh,FINANCIERAS,NO,LOCAL,SF
-InFinance XP*,Financiera Oh,FINANCIERAS,NO,LOCAL,SF
+Financiera Oh!,Financiera XP,FINANCIERAS,NO,LOCAL,SF
+Financiera Oh!*,Financiera XP,FINANCIERAS,NO,LOCAL,SF
+InFinance XP*,Financiera XP,FINANCIERAS,NO,LOCAL,SF
 Financiera Proempresa,Financiera Proempresa,FINANCIERAS,SI,LOCAL,SMF
 Financiera Proempresa *,Financiera Proempresa,FINANCIERAS,SI,LOCAL,SMF
 Financiera Qapaq,Financiera Qapaq,FINANCIERAS,SI,LOCAL,SMF
