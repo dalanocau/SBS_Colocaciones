@@ -1,0 +1,230 @@
+﻿nombre_sbs,nombre_bd,entidad,microfinanciera,nacional,clasificacion
+Alfin Banco,Alfin Banco,BANCOS,NO,LOCAL,SF
+B. Interamericano de Finanzas,BanBif,BANCOS,NO,LOCAL,SF
+Banco Interamericano de Finanzas,BanBif,BANCOS,NO,LOCAL,SF
+B. Azteca Perú,Banco Azteca,BANCOS,NO,LOCAL,SF
+Banco Azteca Perú,Banco Azteca,BANCOS,NO,LOCAL,SF
+Banco Azteca del Perú **,Banco Azteca,BANCOS,NO,LOCAL,SF
+Banco BCI Perú,Banco BCI Perú,BANCOS,NO,LOCAL,SF
+B. Cencosud,Banco Cencosud,BANCOS,NO,LOCAL,SF
+Banco Cencosud,Banco Cencosud,BANCOS,NO,LOCAL,SF
+Banco Cencosud *,Banco Cencosud,BANCOS,NO,LOCAL,SF
+B. BBVA Perú,Banco Continental,BANCOS,NO,LOCAL,SF
+B. Continental,Banco Continental,BANCOS,NO,LOCAL,SF
+Banco Continental,Banco Continental,BANCOS,NO,LOCAL,SF
+B. Efectiva*,Banco Efectiva,BANCOS,NO,LOCAL,SF
+Banco Efectiva,Banco Efectiva,BANCOS,NO,LOCAL,SF
+Financiera Efectiva,Banco Efectiva,BANCOS,NO,LOCAL,SF
+Financiera Efectiva *,Banco Efectiva,BANCOS,NO,LOCAL,SF
+B. Falabella Perú,Banco Falabella,BANCOS,NO,LOCAL,SF
+Banco Falabella Perú,Banco Falabella,BANCOS,NO,LOCAL,SF
+B. Financiero,Banco Financiero,BANCOS,NO,LOCAL,SF
+B. Pichincha,Banco Financiero,BANCOS,NO,LOCAL,SF
+Banco Financiero,Banco Financiero,BANCOS,NO,LOCAL,SF
+B. GNB,Banco GNB,BANCOS,NO,LOCAL,SF
+B.GNB,Banco GNB,BANCOS,NO,LOCAL,SF
+Banco GNB,Banco GNB,BANCOS,NO,LOCAL,SF
+Banco GNB *,Banco GNB,BANCOS,NO,LOCAL,SF
+HSBC Bank Perú,Banco HSBC,BANCOS,NO,LOCAL,SF
+B. ICBC,Banco ICBC,BANCOS,NO,LOCAL,SF
+Banco ICBC,Banco ICBC,BANCOS,NO,LOCAL,SF
+B. Ripley,Banco Ripley,BANCOS,NO,LOCAL,SF
+Banco Ripley,Banco Ripley,BANCOS,NO,LOCAL,SF
+Banco Ripley *,Banco Ripley,BANCOS,NO,LOCAL,SF
+Banco Ripley.,Banco Ripley,BANCOS,NO,LOCAL,SF
+B. Santander Perú,Banco Santander,BANCOS,NO,LOCAL,SF
+Banco Santander Perú,Banco Santander,BANCOS,NO,LOCAL,SF
+Banco Santander Consumer,Banco Santander Consumer,BANCOS,NO,LOCAL,SF
+Crediscotia Financiera,Banco Santander Consumer,BANCOS,NO,LOCAL,SF
+Crediscotia Financiera *,Banco Santander Consumer,BANCOS,NO,LOCAL,SF
+Santander Consumer Bank,Banco Santander Consumer,BANCOS,NO,LOCAL,SF
+Banco de China Perú,Banco de China Perú,BANCOS,NO,LOCAL,SF
+Bank of China,Banco de China Perú,BANCOS,NO,LOCAL,SF
+B. de Comercio,Banco de Comercio,BANCOS,NO,LOCAL,SF
+BANCOM,Banco de Comercio,BANCOS,NO,LOCAL,SF
+Banco de Comercio,Banco de Comercio,BANCOS,NO,LOCAL,SF
+B. de Crédito del Perú,Banco de Crédito,BANCOS,NO,NACIONAL,SF
+Banco de Crédito del Perú,Banco de Crédito,BANCOS,NO,NACIONAL,SF
+Banco de Crédito del Perú *,Banco de Crédito,BANCOS,NO,NACIONAL,SF
+B. de Crédito del Perú (con sucursales en el exterior),Banco de Crédito - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Banco de Crédito con Sucursales en el Exterior,Banco de Crédito - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Banco de Crédito con Sucursales en el Exterior *,Banco de Crédito - Sucursales,BANCOS,NO,EXTRANJERO,SF
+B. del Trabajo,Banco del Trabajo,BANCOS,NO,LOCAL,SF
+Banco del Trabajo,Banco del Trabajo,BANCOS,NO,LOCAL,SF
+Citibank,Citibank,BANCOS,NO,LOCAL,SF
+Citibank *,Citibank,BANCOS,NO,LOCAL,SF
+Compartamos Banco,Compartamos Banco,BANCOS,SI,LOCAL,SMF
+Compartamos Financiera,Compartamos Banco,BANCOS,SI,LOCAL,SMF
+Deutsche Bank Perù,DeutscheBank,BANCOS,NO,LOCAL,SF
+Deutsche Bank Perú,DeutscheBank,BANCOS,NO,LOCAL,SF
+Deutsche Bank Perú *,DeutscheBank,BANCOS,NO,LOCAL,SF
+Interbank,Interbank,BANCOS,NO,NACIONAL,SF
+Interbank (con sucursales en el exterior),Interbank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Interbank Perú con Sucursales en el Exterior,Interbank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Interbank con Sucursales en el Exterior *,Interbank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Mibanco,Mibanco,BANCOS,SI,LOCAL,SMF
+Scotiabank Perú,Scotiabank,BANCOS,NO,NACIONAL,SF
+Scotiabank Perú (con sucursales en el exterior),Scotiabank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Scotiabank Perú (consucursales en el exterior),Scotiabank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Scotiabank Perú con Sucursales en el Exterior,Scotiabank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+Scotiabank con Sucursales en el Exterior,Scotiabank - Sucursales,BANCOS,NO,EXTRANJERO,SF
+CMAC Arequipa,CMAC Arequipa,CMAC,SI,LOCAL,SMF
+CMAC Arequipa (*),CMAC Arequipa,CMAC,SI,LOCAL,SMF
+CMAC Cusco,CMAC Cusco,CMAC,SI,LOCAL,SMF
+CMAC Cusco (*),CMAC Cusco,CMAC,SI,LOCAL,SMF
+CMAC Del Santa,CMAC Del Santa,CMAC,SI,LOCAL,SMF
+CMAC Huancayo,CMAC Huancayo,CMAC,SI,LOCAL,SMF
+CMAC Ica,CMAC Ica,CMAC,SI,LOCAL,SMF
+CMAC Maynas,CMAC Maynas,CMAC,SI,LOCAL,SMF
+CMAC Paita,CMAC Paita,CMAC,SI,LOCAL,SMF
+CMAC Pisco,CMAC Pisco,CMAC,SI,LOCAL,SF
+CMAC Pisco (*),CMAC Pisco,CMAC,SI,LOCAL,SF
+CMAC Piura,CMAC Piura,CMAC,SI,LOCAL,SMF
+CMAC Piura (*),CMAC Piura,CMAC,SI,LOCAL,SMF
+CMAC Piura 1/,CMAC Piura,CMAC,SI,LOCAL,SMF
+CMAC Sullana,CMAC Sullana,CMAC,SI,LOCAL,SF
+CMAC Sullana (*),CMAC Sullana,CMAC,SI,LOCAL,SF
+CMAC Tacna,CMAC Tacna,CMAC,SI,LOCAL,SMF
+CMAC Trujillo,CMAC Trujillo,CMAC,SI,LOCAL,SMF
+CMCP Lima,CMCP Lima,CMAC,SI,LOCAL,SF
+Caja Municipal de Crédito Popular Lima,CMCP Lima,CMAC,SI,LOCAL,SF
+CRAC CAT Perú,CRAC CAT Perú,CRAC,NO,LOCAL,SF
+CRAC Cencosud Scotia,CRAC CAT Perú,CRAC,NO,LOCAL,SF
+CRAC Cajamarca,CRAC Cajamarca,CRAC,SI,LOCAL,SF
+CRAC Cajasur,CRAC Cajasur,CRAC,SI,LOCAL,SF
+CRAC Chavín,CRAC Chavín,CRAC,SI,LOCAL,SF
+CRAC Credinka,CRAC Credinka,CRAC,SI,LOCAL,SF
+CRAC Incasur,CRAC Incasur,CRAC,SI,LOCAL,SF
+CRAC Incasur 1/,CRAC Incasur,CRAC,SI,LOCAL,SF
+CRAC Incasur 3/,CRAC Incasur,CRAC,SI,LOCAL,SF
+CRAC Libertadores de Ayacucho,CRAC Libertadores de Ayacucho,CRAC,SI,LOCAL,SF
+CRAC Los Andes,CRAC Los Andes,CRAC,SI,LOCAL,SMF
+CRAC Nor Perú,CRAC Nor Perú,CRAC,SI,LOCAL,SF
+CRAC Nuestra Gente,CRAC Nuestra Gente,CRAC,SI,LOCAL,SF
+CRAC Nuestra Gente (*),CRAC Nuestra Gente,CRAC,SI,LOCAL,SF
+CRAC Nuestra Gente1/,CRAC Nuestra Gente,CRAC,SI,LOCAL,SF
+CRAC Profinanzas,CRAC Profinanzas,CRAC,SI,LOCAL,SF
+CRAC Prymera,CRAC Prymera,CRAC,SI,LOCAL,SMF
+CRAC Raíz,CRAC Raíz,CRAC,SI,LOCAL,SF
+CRAC San Martín,CRAC San Martín,CRAC,SI,LOCAL,SF
+CRAC Señor de Luren,CRAC Señor de Luren,CRAC,SI,LOCAL,SF
+CRAC Sipán,CRAC Sipán,CRAC,SI,LOCAL,SF
+CRAC del Centro,CRAC del Centro,CRAC,SI,LOCAL,SF
+Acceso Crediticio,Edpyme Acceso Crediticio,EDPYMES,SI,LOCAL,SF
+Acceso Crediticio 1/,Edpyme Acceso Crediticio,EDPYMES,SI,LOCAL,SF
+EC Acceso Crediticio,Edpyme Acceso Crediticio,EDPYMES,SI,LOCAL,SF
+EDPYME Acceso Crediticio,Edpyme Acceso Crediticio,EDPYMES,SI,LOCAL,SF
+EDPYME Acceso Crediticio (*),Edpyme Acceso Crediticio,EDPYMES,SI,LOCAL,SF
+EDPYME Acceso Crediticio 1/,Edpyme Acceso Crediticio,EDPYMES,SI,LOCAL,SF
+Alternativa,Edpyme Alternativa,EDPYMES,SI,LOCAL,SMF
+EC Alternativa,Edpyme Alternativa,EDPYMES,SI,LOCAL,SMF
+EDPYME Alternativa,Edpyme Alternativa,EDPYMES,SI,LOCAL,SMF
+BBVA Consumer Finance,Edpyme BBVA Consumer Finance,EDPYMES,SI,LOCAL,SF
+BBVA Consumer Finance***,Edpyme BBVA Consumer Finance,EDPYMES,SI,LOCAL,SF
+EDPYME BBVA Consumer Finance,Edpyme BBVA Consumer Finance,EDPYMES,SI,LOCAL,SF
+Confianza,Edpyme Confianza,EDPYMES,SI,LOCAL,SF
+EDPYME Confianza,Edpyme Confianza,EDPYMES,SI,LOCAL,SF
+Crear Arequipa,Edpyme Crear Arequipa,EDPYMES,SI,LOCAL,SF
+EDPYME Crear Arequipa,Edpyme Crear Arequipa,EDPYMES,SI,LOCAL,SF
+Crear Tacna,Edpyme Crear Tacna,EDPYMES,SI,LOCAL,SF
+EDPYME Crear Tacna,Edpyme Crear Tacna,EDPYMES,SI,LOCAL,SF
+Crear Trujillo,Edpyme Crear Trujillo,EDPYMES,SI,LOCAL,SF
+EDPYME Crear Trujillo,Edpyme Crear Trujillo,EDPYMES,SI,LOCAL,SF
+Credijet,Edpyme Credijet,EDPYMES,SI,LOCAL,SF
+Credijet 1/,Edpyme Credijet,EDPYMES,SI,LOCAL,SF
+EDPYME Credijet,Edpyme Credijet,EDPYMES,SI,LOCAL,SF
+EDPYME Credijet 1/,Edpyme Credijet,EDPYMES,SI,LOCAL,SF
+EDPYME Credijet1/,Edpyme Credijet,EDPYMES,SI,LOCAL,SF
+Credivisión,Edpyme Credivisión,EDPYMES,SI,LOCAL,SF
+EDPYME Credivisión,Edpyme Credivisión,EDPYMES,SI,LOCAL,SF
+EDPYME Edyficar,Edpyme Edyficar,EDPYMES,SI,LOCAL,SF
+Edyficar,Edpyme Edyficar,EDPYMES,SI,LOCAL,SF
+EDPYME Efectiva,Edpyme Efectiva,EDPYMES,SI,LOCAL,SF
+Efectiva,Edpyme Efectiva,EDPYMES,SI,LOCAL,SF
+EDPYME GMG,Edpyme GMG,EDPYMES,SI,LOCAL,SF
+GMG,Edpyme GMG,EDPYMES,SI,LOCAL,SF
+GMG**,Edpyme GMG,EDPYMES,SI,LOCAL,SF
+EC Inversiones La Cruz,Edpyme Inversiones La Cruz,EDPYMES,SI,LOCAL,SF
+EDPYME Inversiones La Cruz,Edpyme Inversiones La Cruz,EDPYMES,SI,LOCAL,SF
+EDPYME Inversiones La Cruz 3/,Edpyme Inversiones La Cruz,EDPYMES,SI,LOCAL,SF
+EDPYME Inversiones La Cruz1/,Edpyme Inversiones La Cruz,EDPYMES,SI,LOCAL,SF
+Inversiones La Cruz,Edpyme Inversiones La Cruz,EDPYMES,SI,LOCAL,SF
+Inversiones La Cruz 1/,Edpyme Inversiones La Cruz,EDPYMES,SI,LOCAL,SF
+EDPYME Marcimex,Edpyme Marcimex,EDPYMES,SI,LOCAL,SF
+EDPYME Marcimex 1/,Edpyme Marcimex,EDPYMES,SI,LOCAL,SF
+EDPYME Marcimex 3/,Edpyme Marcimex,EDPYMES,SI,LOCAL,SF
+Marcimex,Edpyme Marcimex,EDPYMES,SI,LOCAL,SF
+Marcimex 1/,Edpyme Marcimex,EDPYMES,SI,LOCAL,SF
+EC Vívela,Edpyme Micasita,EDPYMES,SI,LOCAL,SF
+EDPYME Micasita,Edpyme Micasita,EDPYMES,SI,LOCAL,SF
+Micasita,Edpyme Micasita,EDPYMES,SI,LOCAL,SF
+EDPYME Nueva Visión,Edpyme Nueva Visión,EDPYMES,SI,LOCAL,SF
+Nueva Visión,Edpyme Nueva Visión,EDPYMES,SI,LOCAL,SF
+EDPYME Pro Negocios,Edpyme Pro Negocios,EDPYMES,SI,LOCAL,SF
+Pro Negocios,Edpyme Pro Negocios,EDPYMES,SI,LOCAL,SF
+EDPYME Proempresa,Edpyme Proempresa,EDPYMES,SI,LOCAL,SF
+Proempresa,Edpyme Proempresa,EDPYMES,SI,LOCAL,SF
+EDPYME Raíz,Edpyme Raíz,EDPYMES,SI,LOCAL,SF
+Raíz,Edpyme Raíz,EDPYMES,SI,LOCAL,SF
+EC Santander,Edpyme Santander,EDPYMES,SI,LOCAL,SF
+EC Santander Consumo,Edpyme Santander,EDPYMES,SI,LOCAL,SF
+Santander,Edpyme Santander,EDPYMES,SI,LOCAL,SF
+EC TOTAL Servicios Financieros,Edpyme Servicios Financieros Total,EDPYMES,SI,LOCAL,SF
+Servicios Financieros TOTAL EDPYME,Edpyme Servicios Financieros Total,EDPYMES,SI,LOCAL,SF
+Servicios Financieros Total,Edpyme Servicios Financieros Total,EDPYMES,SI,LOCAL,SF
+EDPYME Solidaridad,Edpyme Solidaridad,EDPYMES,SI,LOCAL,SF
+Solidaridad,Edpyme Solidaridad,EDPYMES,SI,LOCAL,SF
+EC Volvo Finance,Edpyme Volvo Finance,EDPYMES,SI,LOCAL,SF
+Volvo Finance,Edpyme Volvo Finance,EDPYMES,SI,LOCAL,SF
+Amerika Financiera *,Financiera Amérika Financiera,FINANCIERAS,NO,LOCAL,SF
+Amérika Financiera,Financiera Amérika Financiera,FINANCIERAS,NO,LOCAL,SF
+Amérika Financiera *,Financiera Amérika Financiera,FINANCIERAS,NO,LOCAL,SF
+Financiera Confianza,Financiera Confianza,FINANCIERAS,SI,LOCAL,SMF
+Financiera Confianza *,Financiera Confianza,FINANCIERAS,SI,LOCAL,SMF
+Financiera Confianza2/,Financiera Confianza,FINANCIERAS,SI,LOCAL,SMF
+Financiera Crear,Financiera Crear,FINANCIERAS,SI,LOCAL,SF
+Financiera Crear1/,Financiera Crear,FINANCIERAS,SI,LOCAL,SF
+Financiera Credinka,Financiera Credinka,FINANCIERAS,SI,LOCAL,SF
+Financiera Credinka*,Financiera Credinka,FINANCIERAS,SI,LOCAL,SF
+Financiera Edificar,Financiera Edyficar,FINANCIERAS,SI,LOCAL,SF
+Financiera Edyficar,Financiera Edyficar,FINANCIERAS,SI,LOCAL,SF
+Financiera Edyficar *,Financiera Edyficar,FINANCIERAS,SI,LOCAL,SF
+Financiera Edyficar2/,Financiera Edyficar,FINANCIERAS,SI,LOCAL,SF
+Mitsui Auto Finance,Financiera Mitsui,FINANCIERAS,NO,LOCAL,SF
+Mitsui Auto Finance *,Financiera Mitsui,FINANCIERAS,NO,LOCAL,SF
+Mitsui Financiera,Financiera Mitsui,FINANCIERAS,NO,LOCAL,SF
+Financiera Nueva Visión,Financiera Nueva Visión,FINANCIERAS,SI,LOCAL,SF
+Financiera Nueva Visión *,Financiera Nueva Visión,FINANCIERAS,SI,LOCAL,SF
+Financiera Oh!,Financiera Oh,FINANCIERAS,NO,LOCAL,SF
+Financiera Oh!*,Financiera Oh,FINANCIERAS,NO,LOCAL,SF
+InFinance XP*,Financiera Oh,FINANCIERAS,NO,LOCAL,SF
+Financiera Proempresa,Financiera Proempresa,FINANCIERAS,SI,LOCAL,SMF
+Financiera Proempresa *,Financiera Proempresa,FINANCIERAS,SI,LOCAL,SMF
+Financiera Qapaq,Financiera Qapaq,FINANCIERAS,SI,LOCAL,SMF
+Financiera Qapaq *,Financiera Qapaq,FINANCIERAS,SI,LOCAL,SMF
+Solución Financiera de Crédito,Financiera Solución,FINANCIERAS,SI,LOCAL,SF
+Financiera Surgir,Financiera Surgir,FINANCIERAS,NO,LOCAL,SMF
+Finaciera TFC S.A.,Financiera TFC,FINANCIERAS,NO,LOCAL,SF
+Financiera TFC S.A.,Financiera TFC,FINANCIERAS,NO,LOCAL,SF
+Financiera TFC S.A.1/,Financiera TFC,FINANCIERAS,NO,LOCAL,SF
+Financiera UNO,Financiera UNO,FINANCIERAS,NO,LOCAL,SF
+Financiera UNO 1/,Financiera UNO,FINANCIERAS,NO,LOCAL,SF
+Financiera Universal,Financiera Universal,FINANCIERAS,SI,LOCAL,SF
+Financiera Universal 1/,Financiera Universal,FINANCIERAS,SI,LOCAL,SF
+TOTAL BANCA MÚLTIPLE,Total BM,TOTAL,-,-,-
+TOTAL BANCA MÚLTIPLE 1/,Total BM,TOTAL,-,-,-
+TOTAL CAJAS MUNICIPALES,Total CM,TOTAL,-,-,-
+TOTAL CAJAS MUNICIPALES 1/,Total CM,TOTAL,-,-,-
+TOTAL CAJAS MUNICIPALES DE AHORRO Y CRÉDITO,Total CM,TOTAL,-,-,-
+TOTAL CAJAS RURALES 1/,Total CR,TOTAL,-,-,-
+TOTAL CAJAS RURALES DE AHORRO Y CRÉDITO,Total CR,TOTAL,-,-,-
+TOTAL CAJAS RURALES DE AHORRO Y CRÉDITO **,Total CR,TOTAL,-,-,-
+TOTAL EDPYMES,Total ED,TOTAL,-,-,-
+TOTAL EDPYMES ** 2/,Total ED,TOTAL,-,-,-
+TOTAL EDPYMES 1/,Total ED,TOTAL,-,-,-
+TOTAL EMPRESAS DE CRÉDITOS,Total ED,TOTAL,-,-,-
+TOTAL EMPRESA FINANCIERA,Total FI,TOTAL,-,-,-
+TOTAL EMPRESAS FINANCIERAS,Total FI,TOTAL,-,-,-
+TOTAL EMPRESAS FINANCIERAS 1/,Total FI,TOTAL,-,-,-
+TOTAL EMPRESAS FINANCIERS **,Total FI,TOTAL,-,-,-
+TOTAL EPRESAS FINANCIERAS **,Total FI,TOTAL,-,-,-
