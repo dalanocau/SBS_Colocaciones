@@ -18,9 +18,9 @@ Financiera Efectiva,Banco Efectiva,BANCOS,NO,LOCAL,SF
 Financiera Efectiva *,Banco Efectiva,BANCOS,NO,LOCAL,SF
 B. Falabella Perú,Banco Falabella,BANCOS,NO,LOCAL,SF
 Banco Falabella Perú,Banco Falabella,BANCOS,NO,LOCAL,SF
-B. Financiero,Banco Financiero,BANCOS,NO,LOCAL,SF
-B. Pichincha,Banco Financiero,BANCOS,NO,LOCAL,SF
-Banco Financiero,Banco Financiero,BANCOS,NO,LOCAL,SF
+B. Financiero,Banco Pichincha,BANCOS,NO,LOCAL,SF
+B. Pichincha,Banco Pichincha,BANCOS,NO,LOCAL,SF
+Banco Financiero,Banco Pichincha,BANCOS,NO,LOCAL,SF
 B. GNB,Banco GNB,BANCOS,NO,LOCAL,SF
 B.GNB,Banco GNB,BANCOS,NO,LOCAL,SF
 Banco GNB,Banco GNB,BANCOS,NO,LOCAL,SF
