@@ -43,14 +43,24 @@ MESES = {
 }
 
 ABR_MES = {
-    1: "en", 2: "fe", 3: "mr", 4: "ab", 5: "my", 6: "jn",
+    1: "en", 2: "fe", 3: "ma", 4: "ab", 5: "my", 6: "jn",
     7: "jl", 8: "ag", 9: "se", 10: "oc", 11: "no", 12: "di",
 }
 
 URL_TEMPLATE = (
     "https://intranet2.sbs.gob.pe/estadistica/financiera/{anio}/"
-    "{mes_nombre}/{codigo}-{abr_mes}{anio_corto}.xls"
+    "{mes_nombre}/{codigo}-{abr_mes}{anio}.xls"
 )
+
+MAX_REINTENTOS = 3
+ESPERA_ENTRE_REINTENTOS = 3  # segundos
+
+MAESTRO_PATH_LOCAL = BASE_DIR / "maestro_entidades.csv"
+
+# Firmas de archivo para validar que la descarga sea un Excel real y no una
+# página de error HTML (.xls = OLE2, .xlsx = ZIP)
+_FIRMA_OLE2 = b"\xd0\xcf\x11\xe0"
+_FIRMA_ZIP = b"PK"
 
 # La lista de entidades SMF (Sistema Microfinanciero) para las columnas
 # "Clasificación" / ">50% CB" / ">=50% MYPE" NO se hardcodea acá: vive en la
@@ -82,26 +92,25 @@ def construir_url(codigo: str, anio: int, mes_num: int) -> str:
         mes_nombre=MESES[mes_num],
         codigo=codigo,
         abr_mes=ABR_MES[mes_num],
-        anio_corto=str(anio)[-2:],
     )
 
 
-def descargar_reporte(
+def _es_excel_valido(contenido: bytes) -> bool:
+    return contenido[:4].startswith(_FIRMA_OLE2) or contenido[:2] == _FIRMA_ZIP
+
+
+def descargar_reporte_bytes(
     codigo: str,
     anio: int,
     mes_num: int,
-    reintentos: int = 3,
-    espera_seg: float = 2.0,
-    sheet_name=0,
+    reintentos: int = MAX_REINTENTOS,
+    espera_seg: float = ESPERA_ENTRE_REINTENTOS,
     verify_ssl: bool = False,
-):
+) -> io.BytesIO:
     """
-    Descarga un reporte SBS y lo devuelve como DataFrame (o dict de DataFrames
-    si sheet_name=None y el archivo tiene varias hojas, como en EEFF).
-
-    Reintenta ante fallas de red/timeout. Lanza la última excepción si se
-    agotan los reintentos, para que el llamador decida si abortar solo esa
-    base (ver patrón de robustez usado en RCG) o toda la corrida.
+    Descarga un reporte SBS y devuelve los bytes crudos (BytesIO), validando
+    que el contenido sea realmente un Excel (firma OLE2/ZIP) y no una página
+    HTML de error. Reintenta ante fallas de red o contenido inválido.
     """
     url = construir_url(codigo, anio, mes_num)
     ultimo_error = None
@@ -110,16 +119,50 @@ def descargar_reporte(
         try:
             resp = requests.get(url, verify=verify_ssl, timeout=30)
             resp.raise_for_status()
-            return pd.read_excel(io.BytesIO(resp.content), sheet_name=sheet_name)
-        except Exception as e:
+
+            if not _es_excel_valido(resp.content):
+                muestra = resp.content[:200].lower()
+                if b"<html" in muestra or b"<!doctype" in muestra:
+                    raise ValueError(
+                        f"La SBS devolvió una página web en vez del Excel para "
+                        f"{codigo} (posible error de red/autenticación o el "
+                        f"archivo no existe para este corte). URL: {url}"
+                    )
+                raise ValueError(
+                    f"El contenido descargado para {codigo} no parece un Excel "
+                    f"válido ({len(resp.content)} bytes). URL: {url}"
+                )
+
+            return io.BytesIO(resp.content)
+
+        except (requests.RequestException, ValueError) as e:
             ultimo_error = e
             if intento < reintentos:
                 time.sleep(espera_seg * intento)
 
     raise RuntimeError(
         f"No se pudo descargar {codigo} ({anio}-{mes_num:02d}) tras "
-        f"{reintentos} intentos: {ultimo_error}"
+        f"{reintentos} intentos. Último error: {ultimo_error}"
     )
+
+
+def descargar_reporte(
+    codigo: str,
+    anio: int,
+    mes_num: int,
+    reintentos: int = MAX_REINTENTOS,
+    espera_seg: float = ESPERA_ENTRE_REINTENTOS,
+    sheet_name=0,
+    verify_ssl: bool = False,
+):
+    """
+    Descarga un reporte SBS y lo devuelve ya leído como DataFrame (o dict de
+    DataFrames si sheet_name=None y el archivo tiene varias hojas, como en
+    EEFF). Para bases que necesitan parsear el crudo (header=None) usar
+    descargar_reporte_bytes en su lugar.
+    """
+    contenido = descargar_reporte_bytes(codigo, anio, mes_num, reintentos, espera_seg, verify_ssl)
+    return pd.read_excel(contenido, sheet_name=sheet_name)
 
 
 # ---------------------------------------------------------------------------
@@ -130,11 +173,35 @@ def cargar_maestro(forzar_recarga: bool = False) -> pd.DataFrame:
     """
     Descarga el maestro_entidades.csv desde GitHub y lo cachea en memoria
     para que las 17 bases de una misma corrida no vuelvan a pegarle a la red.
+    Si GitHub falla tras varios intentos, cae a la copia local en Descargas
+    (si existe) en vez de detener todo el proceso.
     """
     global _MAESTRO_CACHE
-    if _MAESTRO_CACHE is None or forzar_recarga:
-        _MAESTRO_CACHE = pd.read_csv(MAESTRO_URL)
-    return _MAESTRO_CACHE
+    if _MAESTRO_CACHE is not None and not forzar_recarga:
+        return _MAESTRO_CACHE
+
+    ultimo_error = None
+    for intento in range(1, MAX_REINTENTOS + 1):
+        try:
+            resp = requests.get(MAESTRO_URL, verify=False, timeout=20)
+            resp.raise_for_status()
+            _MAESTRO_CACHE = pd.read_csv(io.BytesIO(resp.content), encoding="utf-8-sig")
+            _MAESTRO_CACHE["nombre_sbs"] = _MAESTRO_CACHE["nombre_sbs"].apply(normalizar_nombre)
+            return _MAESTRO_CACHE
+        except Exception as e:
+            ultimo_error = e
+            if intento < MAX_REINTENTOS:
+                time.sleep(ESPERA_ENTRE_REINTENTOS)
+
+    if MAESTRO_PATH_LOCAL.exists():
+        _MAESTRO_CACHE = pd.read_csv(MAESTRO_PATH_LOCAL, encoding="utf-8-sig")
+        _MAESTRO_CACHE["nombre_sbs"] = _MAESTRO_CACHE["nombre_sbs"].apply(normalizar_nombre)
+        return _MAESTRO_CACHE
+
+    raise RuntimeError(
+        f"No se pudo cargar el maestro ni desde GitHub ({MAESTRO_URL}) "
+        f"ni localmente ({MAESTRO_PATH_LOCAL}). Último error: {ultimo_error}"
+    )
 
 
 # ---------------------------------------------------------------------------

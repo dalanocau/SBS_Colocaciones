@@ -25,6 +25,7 @@ from pathlib import Path
 from tkinter import messagebox, ttk
 
 from utils_sbs import BASE_DIR, MESES
+from procesar_colocaciones import run as _run_colocaciones
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -42,7 +43,7 @@ def _pendiente(nombre):
 
 
 BASES = {
-    "Colocaciones": _pendiente("Colocaciones"),
+    "Colocaciones": _run_colocaciones,
     "Depósitos": _pendiente("Depósitos"),
     "Personal": _pendiente("Personal"),
     "Castigos": _pendiente("Castigos"),
