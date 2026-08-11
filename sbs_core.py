@@ -178,7 +178,7 @@ def descargar_multiples(codigos_config: list, anio: str, nmes: int, campo_codigo
     codigos_config: lista de dicts, cada uno con al menos {campo_codigo: "B-1234", "tipo": "Bancos", ...}
     Devuelve (contenidos, fallidos):
       - contenidos: dict {tipo: bytes} SOLO de los que sí se descargaron
-      - fallidos:   lista de dicts {tipo, codigo, error} de los que no se pudieron obtener
+      - fallidos:   lista de dicts {tipo, codigo, corte, error} de los que no se pudieron obtener
 
     Uso típico:
         contenidos, fallidos = descargar_multiples(CODIGOS_CORTE, ANIO, NMES)
@@ -189,6 +189,7 @@ def descargar_multiples(codigos_config: list, anio: str, nmes: int, campo_codigo
     """
     url_base = url_base_sbs(anio, nmes)
     _, mes_abr = MESES[nmes]
+    corte_legible = f"{mes_abr}{anio}"  # ej. jn2026
     contenidos, fallidos = {}, []
 
     for cfg in codigos_config:
@@ -198,13 +199,13 @@ def descargar_multiples(codigos_config: list, anio: str, nmes: int, campo_codigo
         try:
             contenidos[tipo] = descargar_archivo_sbs(codigo, anio, mes_abr, url_base)
         except Exception as e:
-            print(f"  [OMITIDO] {tipo} ({codigo}) no se pudo obtener para este corte: {e}")
-            fallidos.append({"tipo": tipo, "codigo": codigo, "error": str(e)})
+            print(f"  [OMITIDO] {tipo} ({codigo}) - {corte_legible}: no se pudo obtener para este corte.")
+            fallidos.append({"tipo": tipo, "codigo": codigo, "corte": corte_legible, "error": str(e)})
 
     if fallidos:
-        print(f"\n[AVISO] {len(fallidos)} archivo(s) no disponibles para este corte, se omiten del resultado:")
+        print(f"\n[AVISO] {len(fallidos)} archivo(s) NO DESCARGADOS para {corte_legible} (se omiten del resultado):")
         for f in fallidos:
-            print(f"  - {f['tipo']} ({f['codigo']})")
+            print(f"  - {f['tipo']} {f['corte']}  (código {f['codigo']})")
         print("Esto es normal si la SBS aún no publicó todos los archivos del mes — el resto del")
         print("proceso continúa igual; vuelve a correr más tarde si quieres completar los faltantes.\n")
 
@@ -305,8 +306,13 @@ class ResolverEntidades:
                     vistos.add(orig)
         sin_match_unicos = sorted(set(self.sin_match))
         if sin_match_unicos:
-            print("\n[AVISO] Entidades sin mapeo, ni exacto ni difuso (excluidas del resultado):")
+            print("\n" + "=" * 60)
+            print(f"[POSIBLE ENTIDAD NUEVA] Se encontraron {len(sin_match_unicos)} nombre(s) que no")
+            print("están en el maestro_entidades.csv (ni exacto ni por similitud). Quedan")
+            print("EXCLUIDOS del resultado hasta que los agregues en GitHub:")
             for e in sin_match_unicos:
-                print(f"  - {e}")
-            print("Agrégalas al maestro_entidades.csv en GitHub y vuelve a correr si quieres incluirlas.\n")
+                print(f"  - {e!r}")
+            print("Si es una entidad nueva/renombrada, agrégala como fila nueva en el CSV")
+            print("(nombre_sbs -> nombre_bd) y vuelve a correr para incluirla.")
+            print("=" * 60 + "\n")
         return sin_match_unicos
