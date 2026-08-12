@@ -36,6 +36,7 @@ from procesar_patrimonio_efectivo import run as _run_patrimonio_efectivo
 from procesar_rcg import run as _run_rcg
 from procesar_estructura_gasto import run as _run_estructura_gasto
 from procesar_ingresos_financieros import run as _run_ingresos_financieros
+from procesar_ratio_liquidez import run as _run_ratio_liquidez
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -64,7 +65,7 @@ BASES = {
     "RCG": _run_rcg,
     "Estructura de Gasto": _run_estructura_gasto,
     "Ingresos Financieros": _run_ingresos_financieros,
-    "Ratio de Liquidez": _pendiente("Ratio de Liquidez"),
+    "Ratio de Liquidez": _run_ratio_liquidez,
     "Oficinas por Zona Geográfica": _pendiente("Oficinas por Zona Geográfica"),
     "Créditos y Depósitos por Zona Geográfica": _pendiente("Créditos y Depósitos por Zona Geográfica"),
     "Indicadores": _pendiente("Indicadores"),
