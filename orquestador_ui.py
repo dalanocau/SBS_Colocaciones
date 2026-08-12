@@ -30,6 +30,7 @@ from procesar_depositos import run as _run_depositos
 from procesar_personal import run as _run_personal
 from procesar_castigos import run as _run_castigos
 from procesar_clientes_credito import run as _run_clientes_credito
+from procesar_clientes_ahorro import run as _run_clientes_ahorro
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -52,7 +53,7 @@ BASES = {
     "Personal": _run_personal,
     "Castigos": _run_castigos,
     "Clientes de Crédito": _run_clientes_credito,
-    "Clientes de Ahorro": _pendiente("Clientes de Ahorro"),
+    "Clientes de Ahorro": _run_clientes_ahorro,
     "Categoría de Riesgo del Cliente": _pendiente("Categoría de Riesgo del Cliente"),
     "Patrimonio Efectivo": _pendiente("Patrimonio Efectivo"),
     "RCG": _pendiente("RCG"),
