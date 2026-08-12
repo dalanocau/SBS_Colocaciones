@@ -28,6 +28,7 @@ from utils_sbs import BASE_DIR, MESES
 from procesar_colocaciones import run as _run_colocaciones
 from procesar_depositos import run as _run_depositos
 from procesar_personal import run as _run_personal
+from procesar_castigos import run as _run_castigos
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -48,7 +49,7 @@ BASES = {
     "Colocaciones": _run_colocaciones,
     "Depósitos": _run_depositos,
     "Personal": _run_personal,
-    "Castigos": _pendiente("Castigos"),
+    "Castigos": _run_castigos,
     "Clientes de Crédito": _pendiente("Clientes de Crédito"),
     "Clientes de Ahorro": _pendiente("Clientes de Ahorro"),
     "Categoría de Riesgo del Cliente": _pendiente("Categoría de Riesgo del Cliente"),
