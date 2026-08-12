@@ -34,6 +34,7 @@ from procesar_clientes_ahorro import run as _run_clientes_ahorro
 from procesar_categoria_riesgo import run as _run_categoria_riesgo
 from procesar_patrimonio_efectivo import run as _run_patrimonio_efectivo
 from procesar_rcg import run as _run_rcg
+from procesar_estructura_gasto import run as _run_estructura_gasto
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -60,7 +61,7 @@ BASES = {
     "Categoría de Riesgo del Cliente": _run_categoria_riesgo,
     "Patrimonio Efectivo": _run_patrimonio_efectivo,
     "RCG": _run_rcg,
-    "Estructura de Gasto": _pendiente("Estructura de Gasto"),
+    "Estructura de Gasto": _run_estructura_gasto,
     "Ingresos Financieros": _pendiente("Ingresos Financieros"),
     "Ratio de Liquidez": _pendiente("Ratio de Liquidez"),
     "Oficinas por Zona Geográfica": _pendiente("Oficinas por Zona Geográfica"),
