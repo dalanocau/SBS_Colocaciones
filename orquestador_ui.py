@@ -27,6 +27,7 @@ from tkinter import messagebox, ttk
 from utils_sbs import BASE_DIR, MESES
 from procesar_colocaciones import run as _run_colocaciones
 from procesar_depositos import run as _run_depositos
+from procesar_personal import run as _run_personal
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -46,7 +47,7 @@ def _pendiente(nombre):
 BASES = {
     "Colocaciones": _run_colocaciones,
     "Depósitos": _run_depositos,
-    "Personal": _pendiente("Personal"),
+    "Personal": _run_personal,
     "Castigos": _pendiente("Castigos"),
     "Clientes de Crédito": _pendiente("Clientes de Crédito"),
     "Clientes de Ahorro": _pendiente("Clientes de Ahorro"),
