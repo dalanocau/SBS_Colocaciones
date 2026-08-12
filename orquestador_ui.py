@@ -41,6 +41,7 @@ from procesar_oficinas import run as _run_oficinas
 from procesar_creditos_depositos_zona import run as _run_creditos_depositos_zona
 from procesar_indicadores import run as _run_indicadores
 from procesar_gastos_administrativos import run as _run_gastos_administrativos
+from procesar_eeff import run as _run_eeff
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -74,7 +75,7 @@ BASES = {
     "Créditos y Depósitos por Zona Geográfica": _run_creditos_depositos_zona,
     "Indicadores": _run_indicadores,
     "Gastos Administrativos": _run_gastos_administrativos,
-    "EEFF": _pendiente("EEFF"),
+    "EEFF": _run_eeff,
 }
 
 ESTADO_PATH = BASE_DIR / "orquestador_estado.json"
