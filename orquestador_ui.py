@@ -38,6 +38,7 @@ from procesar_estructura_gasto import run as _run_estructura_gasto
 from procesar_ingresos_financieros import run as _run_ingresos_financieros
 from procesar_ratio_liquidez import run as _run_ratio_liquidez
 from procesar_oficinas import run as _run_oficinas
+from procesar_creditos_depositos_zona import run as _run_creditos_depositos_zona
 
 # ---------------------------------------------------------------------------
 # Registro de bases: nombre visible -> función run(anio, mes_num)
@@ -68,7 +69,7 @@ BASES = {
     "Ingresos Financieros": _run_ingresos_financieros,
     "Ratio de Liquidez": _run_ratio_liquidez,
     "Oficinas por Zona Geográfica": _run_oficinas,
-    "Créditos y Depósitos por Zona Geográfica": _pendiente("Créditos y Depósitos por Zona Geográfica"),
+    "Créditos y Depósitos por Zona Geográfica": _run_creditos_depositos_zona,
     "Indicadores": _pendiente("Indicadores"),
     "Gastos Administrativos": _pendiente("Gastos Administrativos"),
     "EEFF": _pendiente("EEFF"),
